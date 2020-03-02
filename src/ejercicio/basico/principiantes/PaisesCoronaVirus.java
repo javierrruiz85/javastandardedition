@@ -12,7 +12,7 @@ public class PaisesCoronaVirus {
 
 		int totalInfectados = 0;
 
-		// Recorrer paises y preguntar si existe algun caso de coronaviruS
+		// Recorrer paises y preguntar si existe algun caso de coronavirus
 		// en caso afirmativo preguntar numero de infectados
 
 		// Finalmente:
