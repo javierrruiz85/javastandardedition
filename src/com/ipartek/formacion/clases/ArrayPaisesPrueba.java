@@ -1,5 +1,7 @@
 package com.ipartek.formacion.clases;
 
+import java.util.Scanner;
+
 public class ArrayPaisesPrueba {
 
 	public static void main(String[] args) {
@@ -8,31 +10,40 @@ public class ArrayPaisesPrueba {
 
 		// declarar un Array
 		ArrayPaises[] paises = new ArrayPaises[5];
+		/*
+		 * ArrayPaises p = new ArrayPaises(); p.setNombre("España"); p.setNumCasos(120);
+		 * paises[0] = p;
+		 * 
+		 * p = new ArrayPaises(); p.setNombre("Francia"); p.setNumCasos(14); paises[1] =
+		 * p;
+		 * 
+		 * p = new ArrayPaises(); p.setNombre("Alemania"); p.setNumCasos(0); paises[2] =
+		 * p;
+		 * 
+		 * p = new ArrayPaises(); p.setNombre("Noruega"); p.setNumCasos(2); paises[3] =
+		 * p;
+		 * 
+		 * p = new ArrayPaises(); p.setNombre("Italia"); p.setNumCasos(400); paises[4] =
+		 * p;
+		 */
 
-		ArrayPaises p = new ArrayPaises();
-		p.setNombre("España");
-		p.setNumCasos(120);
-		paises[0] = p;
+		for (int i = 0; i < paises.length; i++) {
 
-		p = new ArrayPaises();
-		p.setNombre("Francia");
-		p.setNumCasos(14);
-		paises[1] = p;
+			System.out.println("Dame el nombre de un pais: ");
+			Scanner teclado = new Scanner(System.in);
+			String nombrePais = teclado.nextLine();
 
-		p = new ArrayPaises();
-		p.setNombre("Alemania");
-		p.setNumCasos(0);
-		paises[2] = p;
+			System.out.println("Dame el total de infectados de ese pais: ");
+			int totalInfectados = teclado.nextInt();
 
-		p = new ArrayPaises();
-		p.setNombre("Noruega");
-		p.setNumCasos(2);
-		paises[3] = p;
+			ArrayPaises p = new ArrayPaises();
+			p.setNombre(nombrePais);
+			p.setNumCasos(totalInfectados);
+			paises[i] = p;
 
-		p = new ArrayPaises();
-		p.setNombre("Italia");
-		p.setNumCasos(400);
-		paises[4] = p;
+			teclado.close();
+
+		}
 
 		for (int i = 0; i < paises.length; i++) {
 			// System.out.println("En " + paises[i].getNombre() + " hay " +
