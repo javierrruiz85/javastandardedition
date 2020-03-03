@@ -25,7 +25,9 @@ public class PaisesCoronaVirus {
 			System.out.println("¿Hay infectados en " + pais + "?: ");
 
 			Scanner teclado = new Scanner(System.in);
-			String nombre = teclado.nextLine();
+			String comprobar = teclado.nextLine();
+
+			paisesInfectados[i] = true;
 
 			if (paisesInfectados[i] = true) {
 				System.out.println("Cuantos infectados hay: ");
