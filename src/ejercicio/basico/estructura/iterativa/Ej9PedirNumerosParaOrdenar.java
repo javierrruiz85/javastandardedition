@@ -25,6 +25,21 @@ public class Ej9PedirNumerosParaOrdenar {
 
 		} while (num1 == num2);
 
+		// comprobar el mayor y el menor
+		if (num1 > num2) {
+			mayor = num1;
+			menor = num2;
+		} else {
+			mayor = num2;
+			menor = num1;
+		}
+
+		// mostrar los numeros en orden ascendente
+		System.out.println("Numeros entre " + menor + " y " + mayor);
+		for (int i = menor; i <= mayor; i++) {
+			System.out.println(i);
+		}
+
 		pedirNumero.close();
 
 	}
