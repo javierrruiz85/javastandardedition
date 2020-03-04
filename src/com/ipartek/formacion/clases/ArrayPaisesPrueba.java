@@ -45,12 +45,6 @@ public class ArrayPaisesPrueba {
 		System.out.println("");
 		System.out.println("Hay " + totalCasos + " casos en total");
 
-		/*
-		 * for (int i = 0; i < paises.length; i++) { if ( > 0) {
-		 * 
-		 * } }
-		 */
-
 		teclado.close();
 
 	}
