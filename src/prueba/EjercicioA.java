@@ -18,8 +18,8 @@ public class EjercicioA {
 
 		float[] alturas = new float[5];
 		float total = 0;
-		float mayor = 0;
-		float menor = 0;
+		float mayor = Float.MIN_VALUE;
+		float menor = Float.MAX_VALUE;
 
 		Scanner escaner = new Scanner(System.in);
 
@@ -30,8 +30,6 @@ public class EjercicioA {
 			total = total + alturas[i];
 
 			// TODO revisar esta mierda que no rula
-			mayor = altura;
-			menor = altura;
 
 			if (altura >= mayor) {
 				mayor = altura;
@@ -40,6 +38,9 @@ public class EjercicioA {
 			if (altura <= menor) {
 				menor = altura;
 			}
+
+			// System.out.println("mayor = " + mayor);
+			// System.out.println("menor = " + menor);
 		}
 
 		System.out.println("La altura media es de : " + total / 5);
