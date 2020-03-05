@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /**
  * 
- * crear proyecto en modo consola, un menu con 3 opciones calcular la letra del
- * dni calcular medida de grados a farenheit salir del menu
+ * crear proyecto en modo consola, un menu con 3 opciones, calcular la letra del
+ * dni, pasar de ºC a ºF y salir del menu
  *
  *
  * BUCLES
@@ -88,13 +88,12 @@ public class EjercicioB {
 
 		System.out.println("Dame tu DNI para calcular la letra: ");
 		sc = new Scanner(System.in);
-		String leidoPorPantalla = sc.nextLine(); // leemos el dni del usuario (siempre con un nextLine, de lo contrario
-													// no funciona)
-		int dni = Integer.parseInt(leidoPorPantalla); // parseamos el dato leido, de un string a un int para que el
-														// programa puede usarlo
+		String leidoPorPantalla = sc.nextLine(); // leemos el dni del usuario (siempre con un nextLine, de lo contrario no
+													// funciona)
+		int dni = Integer.parseInt(leidoPorPantalla); // parseamos el dato leido, de un string a un int para que el programa puede
+														// usarlo
 
-		final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q',
-				'V', 'H', 'L', 'C', 'K', 'E' };
+		final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
 		int resto = dni % 23;
 
