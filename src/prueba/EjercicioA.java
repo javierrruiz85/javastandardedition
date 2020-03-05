@@ -43,9 +43,9 @@ public class EjercicioA {
 			// System.out.println("menor = " + menor);
 		}
 
-		System.out.println("La altura media es de : " + total / 5);
-		System.out.println("La altura mayor es " + mayor);
-		System.out.println("La altura mayor es " + menor);
+		System.out.println("La altura media es de : " + total / 5 + " cm");
+		System.out.println("La altura mayor es " + mayor + " cm");
+		System.out.println("La altura menor es " + menor + " cm");
 
 		escaner.close();
 
