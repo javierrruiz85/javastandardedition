@@ -28,7 +28,7 @@ public class UF2404EjercicioA {
 		Scanner escaner = new Scanner(System.in);
 
 		// para mostrar solo un decimal
-		DecimalFormat df = new DecimalFormat("#.0");
+		DecimalFormat decimales = new DecimalFormat("#.0");
 
 		System.out.println("Dame 5 notas para calcular la calificacion mas alta, la mas baja y la media de todas ellas.");
 
@@ -37,8 +37,17 @@ public class UF2404EjercicioA {
 
 			// preguntar por pantalla la nota
 			System.out.println("Dame la nota: ");
-			double nota = Double.parseDouble(escaner.nextLine());
-			// guardar en el aray la nota
+			double nota = -1;
+
+			do {
+				try {
+					nota = Double.parseDouble(escaner.nextLine());
+				} catch (Exception e) {
+					System.out.println("Por favor, introduce una nota correcta");
+				}
+			} while (nota == -1);
+
+			// guardar en el array la nota
 			arrayNotas[i] = nota;
 			// sumar la nota en la variable media
 			media = media + nota;
@@ -55,10 +64,10 @@ public class UF2404EjercicioA {
 
 		} // end for
 
-		System.out.println("La calificacion mas alta es un: " + df.format(maxima));
-		System.out.println("La calificacion mas baja es un: " + df.format(minima));
+		System.out.println("La calificacion mas alta es un " + decimales.format(maxima));
+		System.out.println("La calificacion mas baja es un " + decimales.format(minima));
 		// usar la variable media para conseguir la media de las notas
-		System.out.println("La nota media es un: " + df.format(media / 5));
+		System.out.println("La nota media es un " + decimales.format(media / 5));
 
 		// cerrar escaner
 		escaner.close();

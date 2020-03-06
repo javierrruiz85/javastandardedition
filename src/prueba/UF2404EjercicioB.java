@@ -41,31 +41,38 @@ public class UF2404EjercicioB {
 			System.out.println("*        Selecciona una opcion         *");
 			System.out.println("*                                      *");
 			System.out.println("****************************************");
-			// pedir una opcion al usuario por pantalla
-			opcion = Integer.parseInt(escaner.nextLine());
 
-			// switch case
-			switch (opcion) {
-			case 1:
-				calcularDNI();
-				break;
+			try {
+				// pedir una opcion al usuario por pantalla
+				opcion = Integer.parseInt(escaner.nextLine());
 
-			case 2:
-				convertirMedidas();
-				break;
+				// switch case
+				switch (opcion) {
+				case 1:
+					calcularDNI();
+					break;
 
-			case 3:
-				System.out.println(" ");
-				System.out.println("Hasta luego");
-				System.out.println(" ");
-				continuar = false;
-				break;
+				case 2:
+					convertirMedidas();
+					break;
 
-			default:
+				case 3:
+					System.out.println(" ");
+					System.out.println("Hasta luego");
+					System.out.println(" ");
+					continuar = false;
+					break;
+
+				default:
+					System.out.println(" ");
+					System.out.println("Por favor, selecciona una opcion valida");
+					System.out.println(" ");
+					break;
+				}
+			} catch (Exception e) {
 				System.out.println(" ");
 				System.out.println("Por favor, selecciona una opcion valida");
 				System.out.println(" ");
-				break;
 			}
 
 		} while (continuar); // while (continuar)
@@ -80,33 +87,68 @@ public class UF2404EjercicioB {
 		// System.out.println("Calcular DNI");
 		System.out.println(" ");
 		System.out.println("Dame un numero de DNI para calcular su letra: ");
+
 		escaner = new Scanner(System.in);
 
-		String dniPantalla = escaner.nextLine();
-		int dni = Integer.parseInt(dniPantalla);
+		int dni = 0;
+		boolean bien = true;
 
-		final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
+		do {
+			String dniPantalla = escaner.nextLine();
 
-		System.out.println(" ");
-		System.out.println("Al DNI " + dniPantalla + " le corresponde la letra " + LETRADNI[dni % 23]);
-		System.out.println(" ");
+			if (dniPantalla.length() != 8) {
+				System.out.println(" ");
+				System.out.println("Por favor, introduce un DNI valido de 8 digitos");
+				System.out.println(" ");
+			}
+
+			else {
+				try {
+					dni = Integer.parseInt(dniPantalla);
+					final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
+
+					System.out.println(" ");
+					System.out.println("Al DNI " + dniPantalla + " le corresponde la letra " + LETRADNI[dni % 23]);
+					System.out.println(" ");
+					bien = false;
+				} catch (Exception e) {
+					System.out.println(" ");
+					System.out.println("Por favor, introduce un DNI valido de 8 digitos");
+					System.out.println(" ");
+					// e.printStackTrace(); <==== esta linea muestra el mismo codigo de error que da
+					// java por defecto
+				}
+
+			}
+		} while (bien);
+
 	}
 
 	private static void convertirMedidas() {
 
 		// para mostrar solo 2 decimales
-		DecimalFormat df = new DecimalFormat("#.00");
+		DecimalFormat decimales = new DecimalFormat("#.00");
 
 		System.out.println(" ");
 		System.out.println("Dame una medida en centimetros para calcularla en pulgadas: ");
 		escaner = new Scanner(System.in);
+		boolean control = true;
 
-		String medidaPantalla = escaner.nextLine();
-		double medida = Double.parseDouble(medidaPantalla);
+		do {
+			try {
+				String medidaPantalla = escaner.nextLine();
+				double medida = Double.parseDouble(medidaPantalla);
 
-		System.out.println(" ");
-		System.out.println(medidaPantalla + " cm son " + df.format(medida / 2.54) + " pulgadas");
-		System.out.println(" ");
+				System.out.println(" ");
+				System.out.println(medidaPantalla + " cm son " + decimales.format(medida / 2.54) + " pulgadas");
+				System.out.println(" ");
+				control = false;
+			} catch (Exception e) {
+				System.out.println(" ");
+				System.out.println("Por favor, introduce una medida correcta");
+				System.out.println(" ");
+			}
+		} while (control);
 
 	}
 
