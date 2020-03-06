@@ -25,7 +25,7 @@ public class EjercicioA {
 
 		for (int i = 0; i < alturas.length; i++) {
 			System.out.println("Dame una altura: ");
-			int altura = Integer.parseInt(escaner.nextLine());
+			float altura = Float.parseFloat(escaner.nextLine());
 			alturas[i] = altura;
 			total = total + alturas[i];
 

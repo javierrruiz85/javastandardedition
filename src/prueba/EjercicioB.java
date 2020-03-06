@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * BUCLES
  *
- * FOR: hacer cuando haya una coleccion de datos, WHILE: intentar evitar, DO
+ * FOR: hacer cuando haya una coleccion de datos WHILE: intentar evitar, DO
  * WHILE: usar cuando se tenga que ejecutar la repeticion al menos una vez
  *
  *
