@@ -23,15 +23,35 @@ public class Ejercicio3 {
 
 		Scanner escaner = new Scanner(System.in);
 
-		String cadena = "La lluvia en Sevilla no es una maravilla";
-		int longitud = cadena.length();
+		String cadena;
+		int longitud = 0;
 		boolean continuar = true;
 
-		System.out.println("Dame el numero de una posicion para ver a que letra corresponde: ");
-		String posicion = escaner.nextLine();
-		int posicionCadena = Integer.parseInt(posicion);
+		do {
+			try {
+				System.out.println("Escribeme una frase: ");
+				cadena = escaner.nextLine();
+				longitud = cadena.length();
 
-		System.out.println(longitud);
+				System.out.println("Dame el numero de una posicion para ver a que letra corresponde: ");
+				String posicion = escaner.nextLine();
+				int posicionCadena = Integer.parseInt(posicion);
+				int posCadena = posicionCadena - 1;
+
+				System.out.println("La letra en la posicion " + posicion + " es la '" + cadena.charAt(posCadena) + "'");
+				continuar = false;
+
+			} catch (StringIndexOutOfBoundsException e) {
+				System.out.println("Dame un numero comprendido entre 1 y " + longitud);
+
+			} catch (NullPointerException e) {
+				System.out.println("Error, debes escribir una frase completa.");
+
+			} catch (Exception e) {
+				System.out.println("Excepcion no controlada");
+
+			}
+		} while (continuar);
 
 		escaner.close();
 

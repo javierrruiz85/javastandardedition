@@ -21,17 +21,18 @@ public class Ejercicio2 {
 
 		Scanner escaner = new Scanner(System.in);
 
+		String numeroLeido = "";
 		boolean continuar = true;
 
 		do {
 			try {
 				System.out.println("Dame un numero: ");
-				String numeroLeido1 = escaner.nextLine();
-				int num1 = Integer.parseInt(numeroLeido1);
+				numeroLeido = escaner.nextLine();
+				int num1 = Integer.parseInt(numeroLeido);
 
 				System.out.println("Dame otro numero: ");
-				String numeroLeido2 = escaner.nextLine();
-				int num2 = Integer.parseInt(numeroLeido2);
+				numeroLeido = escaner.nextLine();
+				int num2 = Integer.parseInt(numeroLeido);
 
 				System.out.println("Los numeros introducidos han sido " + num1 + " y " + num2);
 
