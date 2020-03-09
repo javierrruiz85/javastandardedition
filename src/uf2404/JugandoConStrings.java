@@ -136,8 +136,7 @@ public class JugandoConStrings {
 
 		// TODO sumar todos los numeros de este String
 
-		final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q',
-				'V', 'H', 'L', 'C', 'K', 'E' };
+		final char LETRADNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
 		String dni = "12345678";
 		int numeroDni = Integer.parseInt(dni);
