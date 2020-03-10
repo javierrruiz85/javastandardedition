@@ -7,6 +7,7 @@ public class Vueltas {
 	public static int[] calcularVueltasOptimas(float importe, float entregado) throws Exception {
 
 		int[] vueltas = new int[BILLETES_MONEDAS.length];
+		float cambios = 0f;
 
 		// TODO vuestro marron
 
@@ -15,9 +16,17 @@ public class Vueltas {
 	}
 
 	public static float calcularVueltas(float importe, float entregado) throws Exception {
-		// TODO vuestro marron
 
-		return 0;
+		float cambios = 0f;
+
+		if (entregado >= importe) {
+			cambios = entregado - importe;
+
+		} else {
+			throw new Exception("El dinero entregado no es suficiente");
+		}
+
+		return cambios;
 	}
 
 }
