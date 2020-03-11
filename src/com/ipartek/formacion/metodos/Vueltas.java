@@ -9,6 +9,16 @@ public class Vueltas {
 		int[] vueltas = new int[BILLETES_MONEDAS.length];
 		float cambios = 0f;
 
+		for (int i = 0; i < vueltas.length; i++) {
+
+			if (entregado >= vueltas[i]) {
+				entregado = entregado - vueltas[i];
+				vueltas[i] = 1;
+			} else {
+				vueltas[i] = 0;
+			}
+		}
+
 		// TODO vuestro marron
 
 		return vueltas;

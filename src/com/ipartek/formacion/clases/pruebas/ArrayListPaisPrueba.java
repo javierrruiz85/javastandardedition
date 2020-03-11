@@ -1,4 +1,4 @@
-package com.ipartek.formacion.clases;
+package com.ipartek.formacion.clases.pruebas;
 
 public class ArrayListPaisPrueba {
 
