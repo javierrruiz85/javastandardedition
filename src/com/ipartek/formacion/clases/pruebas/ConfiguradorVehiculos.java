@@ -24,25 +24,31 @@ public class ConfiguradorVehiculos {
 		// preguntar color
 		System.out.println(" ");
 		System.out.println("Color: ");
-		coche.setColor(color = escaner.nextLine());
+		// coche.setColor(color = escaner.nextLine());
+		color = escaner.nextLine();
+		coche.setColor(color);
 
 		// preguntar matricula
 		System.out.println(" ");
 		System.out.println("Matricula: ");
-		coche.setMatricula(matricula = escaner.nextLine());
+		matricula = escaner.nextLine();
+		coche.setMatricula(matricula);
 
 		// preguntar puertas y resto de atributos
 		System.out.println(" ");
 		System.out.println("Numero de puertas: ");
-		coche.setNumeroPuertas(numeroPuertas = Integer.parseInt(escaner.nextLine()));
+		numeroPuertas = Integer.parseInt(escaner.nextLine());
+		coche.setNumeroPuertas(numeroPuertas);
 
 		System.out.println(" ");
 		System.out.println("Numero de ruedas: ");
-		coche.setNumeroRuedas(numeroRuedas = Integer.parseInt(escaner.nextLine()));
+		numeroRuedas = Integer.parseInt(escaner.nextLine());
+		coche.setNumeroRuedas(numeroRuedas);
 
 		System.out.println(" ");
 		System.out.println("Potencia: ");
-		coche.setPotencia(potencia = Float.parseFloat(escaner.nextLine()));
+		potencia = Float.parseFloat(escaner.nextLine());
+		coche.setPotencia(potencia);
 
 		// mostrar uno a uno todos los atriibutos por consola
 		System.out.println(" ");

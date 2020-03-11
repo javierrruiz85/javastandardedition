@@ -1,5 +1,6 @@
 package com.ipartek.formacion.clases.pruebas;
 
+import com.ipartek.formacion.clases.Coche;
 import com.ipartek.formacion.clases.Vehiculo;
 
 public class VehiculoPruebas {
@@ -26,6 +27,11 @@ public class VehiculoPruebas {
 		System.out.println("puertas: " + v1.getNumeroPuertas());
 		System.out.println("ruedas: " + v1.getNumeroRuedas());
 		System.out.println("potencia: " + v1.getPotencia() + " CV");
+
+		Coche chincuechento = new Coche();
+		chincuechento.setColor("amarillo");
+
+		System.out.println("chincuechento = " + chincuechento);
 
 	}
 
