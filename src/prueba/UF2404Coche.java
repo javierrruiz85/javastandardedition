@@ -30,7 +30,7 @@ package prueba;
 
 public class UF2404Coche {
 
-	// Atributos
+	// Atributos ***********************************************************
 	private String matricula;
 	private String marca;
 	private String modelo;
@@ -38,7 +38,7 @@ public class UF2404Coche {
 	private float potencia;
 	private float cilindrada;
 
-	// Constructores
+	// Constructores ***********************************************************
 	public UF2404Coche() {
 		super();
 		this.matricula = "";
@@ -49,7 +49,7 @@ public class UF2404Coche {
 		this.cilindrada = 0f;
 	}
 
-	// Setters y Getters
+	// Setters y Getters ***********************************************************
 	public String getMatricula() {
 		return matricula;
 	}
@@ -98,7 +98,7 @@ public class UF2404Coche {
 		this.cilindrada = cilindrada;
 	}
 
-	// toString
+	// toString ***********************************************************
 	@Override
 	public String toString() {
 		return "UF2404EjercicioPractico2Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", potencia=" + potencia + ", cilindrada=" + cilindrada + "]";

@@ -111,42 +111,6 @@ public class UF2404CochePrueba {
 
 		escaner.close();
 
-		// numeroCoches = numeroCoches + 1;
-
-		// Creamos el primer coche y le asignamos los valores pedidos arriba
-
-//		arrayCoches[j] = coche1;
-//		j++;
-
-		// System.out.println(coche1.toString());
-
-		// Preguntamos si quiere crear mas coches y en caso afirmativo solicitamos los
-		// datos, creamos el coche y los asignamos
-//		System.out.println(" ");
-//		System.out.println("¿Quieres crear mas coches? Escribe 's' para si o 'n' para no: ");
-//		System.out.println(" ");
-		// masCoches = escaner.nextLine().charAt(0);
-
-//		if (masCoches == 's') {
-//			System.out.println("Dame la matricula: ");
-//			matricula = escaner.nextLine();
-//			System.out.println("Dame la marca: ");
-//			marca = escaner.nextLine();
-//			System.out.println("Dame el modelo: ");
-//			modelo = escaner.nextLine();
-//			System.out.println("Dame el color: ");
-//			color = escaner.nextLine();
-//			System.out.println("Dame la potencia: ");
-//			potenciaTeclado = escaner.nextLine();
-//			potencia = Float.parseFloat(potenciaTeclado);
-//			System.out.println("Dame la cilindrada: ");
-//			cilindradaTeclado = escaner.nextLine();
-//			cilindrada = Float.parseFloat(cilindradaTeclado);
-//
-//			arrayCoches[i] = coche1;
-//
-//		}
-
 	}
 
 }
