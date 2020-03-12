@@ -13,6 +13,9 @@ public class PersonasPruebas {
 		Alumno alumno2 = new Alumno();
 		Alumno alumno3 = new Alumno();
 
+		// crear un array de Alumnos
+		Alumno[] alumnos = new Alumno[3];
+
 		profesor1.setNombre("Ander");
 		profesor1.setAltura(1.70f);
 		profesor1.setEdad(30);
@@ -56,9 +59,18 @@ public class PersonasPruebas {
 		alumno3.setGithub("lauritagit");
 		alumno3.setNota(8.5f);
 
+		alumnos[0] = alumno1;
+		alumnos[1] = alumno2;
+		alumnos[2] = alumno3;
+
 		System.out.println("Ander: " + profesor1.getNombre() + " , Sueldo: " + profesor1.getSueldo() + " €, Materia: " + profesor1.getMateria());
 		System.out.println("La profesora " + profesor2.getNombre() + " tiene a los alumnos " + alumno1.getNombre() + ", " + alumno2.getNombre() + "; " + alumno3.getNombre());
 		System.out.println(alumno3.toString());
+
+		for (Alumno alumno : alumnos) {
+			System.out.println(alumno.getNombre() + " nota: " + alumno.getNota());
+			// System.out.println(alumno.toString());
+		}
 
 	}
 
