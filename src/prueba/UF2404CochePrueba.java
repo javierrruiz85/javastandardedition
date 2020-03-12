@@ -36,6 +36,7 @@ public class UF2404CochePrueba {
 
 		Scanner escaner = new Scanner(System.in);
 
+		// Inicializamos variables
 		String matricula = "";
 		String marca = "";
 		String modelo = "";
@@ -49,13 +50,16 @@ public class UF2404CochePrueba {
 		boolean continuar = true;
 		int contador = 0;
 
+		// Creamos el array
 		UF2404Coche[] arrayCoches = new UF2404Coche[5];
 
 		System.out.println("Vamos a guardar los datos de tu coche: ");
 		System.out.println(" ");
 
+		// Rellenamos el array y vamos preguntando si introducimos mas coches
 		do {
 
+			// Pedimos por pantalla las especificaciones
 			System.out.println("Dame la matricula: ");
 			matricula = escaner.nextLine();
 			System.out.println("Dame la marca: ");
@@ -71,6 +75,7 @@ public class UF2404CochePrueba {
 			cilindradaTeclado = escaner.nextLine();
 			cilindrada = Float.parseFloat(cilindradaTeclado);
 
+			// Creamos el objeto coche y le asignamos los valores que hemos pedido antes
 			UF2404Coche coche = new UF2404Coche();
 			coche.setMatricula(matricula);
 			coche.setMarca(marca);
@@ -79,9 +84,11 @@ public class UF2404CochePrueba {
 			coche.setPotencia(potencia);
 			coche.setCilindrada(cilindrada);
 
+			// Guardamos el coche creado en el array
 			arrayCoches[contador] = coche;
 			contador++;
 
+			// Preguntamos si se van a crear mas coches
 			if (contador <= (arrayCoches.length - 1)) {
 				System.out.println(" ");
 				System.out.println("¿Quieres crear mas coches? Escribe 'si' para si o 'no' para no: ");
@@ -96,6 +103,7 @@ public class UF2404CochePrueba {
 
 		} while (continuar && contador <= (arrayCoches.length - 1));
 
+		// Mostramos por pantalla el array completo
 		for (int i = 0; i < arrayCoches.length; i++) {
 			System.out.println(" ");
 			System.out.println(arrayCoches[i]);
